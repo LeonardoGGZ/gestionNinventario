@@ -28,7 +28,7 @@ import javax.swing.SwingWorker;
 public class ConsultarProductosUI extends JFrame {
 
     public JTextField campoBusqueda;
-    public JButton botonBuscar;
+    public JButton botonBuscar,botonAgregar;
     public JList<Producto> listaProductos;
     public JLabel imagenProducto;
     public JFrame frame;
@@ -101,7 +101,7 @@ public class ConsultarProductosUI extends JFrame {
         panelBusqueda.add(campoBusqueda);
         panelBusqueda.add(botonBuscar);
 
-        JButton botonAgregar = new JButton("Agregar");
+     /*   botonAgregar = new JButton("Agregar");
 
         botonAgregar.addKeyListener(new KeyAdapter() {
 
@@ -111,15 +111,12 @@ public class ConsultarProductosUI extends JFrame {
                     botonAgregar.doClick();
                 }
             }
-        });
+        });*/
 
         
         JFrame frame = this;
 
-        
-        botonAgregar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+            
 
               /*  List<Producto> productosSeleccionados = listaProductos.getSelectedValuesList();
                 for (Producto producto : productosSeleccionados) {
@@ -132,10 +129,9 @@ public class ConsultarProductosUI extends JFrame {
                         producto.setSeleccionado(true);
                     }
                 }*/
-            }
-        });
+         
 
-        panelBusqueda.add(botonAgregar);
+       // panelBusqueda.add(botonAgregar);
 
         //  listaProductos = new JList<>(new DefaultListModel<>());
         listaProductos = new JList<>(new DefaultListModel<>());

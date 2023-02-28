@@ -117,7 +117,8 @@ public class CtrlProducto implements ActionListener {
             }
 
         }
-
+             
+  
     }
 
     private void mostrarImagenProducto(Producto producto) {
