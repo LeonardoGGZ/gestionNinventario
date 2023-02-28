@@ -1,21 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.gestion_inventario.vista;
 
-/**
- *
- * @author Leo
- */
+import com.gestion_inventario.controlador.CtrlProducto;
+import com.gestion_inventario.modelo.ConsultasInventario;
+import com.gestion_inventario.modelo.ConsultasProducto;
+import com.gestion_inventario.modelo.ConsultasRegistros;
+import com.gestion_inventario.modelo.Producto;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class InventoryManagementSystem extends JFrame{
+public class ControlDeInventario extends JFrame{
     
-  public InventoryManagementSystem(){
+  public ControlDeInventario(){
       
     setTitle("Sistema de gestión de inventario");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,7 +59,17 @@ public class InventoryManagementSystem extends JFrame{
     addProductButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         
-          new AgregarProductosUI().setVisible(true);
+         Producto producto = new Producto();
+         ConsultasInventario consultasInventario = new ConsultasInventario();
+         ConsultasProducto consultasProducto = new ConsultasProducto();
+         ConsultasRegistros consultasRegistros = new ConsultasRegistros();
+         ConsultarProductosUI consultarProductosUI = new ConsultarProductosUI();
+         AgregarStockUI agregarStockUI = new AgregarStockUI(consultarProductosUI, producto);
+         
+         
+         CtrlProducto ctrlProducto = new CtrlProducto(producto, consultasProducto, consultarProductosUI);
+         
+         consultarProductosUI.setVisible(true);
         
         
       }

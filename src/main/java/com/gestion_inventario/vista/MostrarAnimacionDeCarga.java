@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.gestion_inventario.vista;
 
 import java.awt.Color;
@@ -10,12 +6,8 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.Timer;
 
-/**
- *
- * @author Leo
- */
+
 public class MostrarAnimacionDeCarga extends JDialog {
 
     private JDialog dialog;

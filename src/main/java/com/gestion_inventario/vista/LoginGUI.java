@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.gestion_inventario.vista;
 
-/**
- *
- * @author Leo
- */
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -53,10 +46,10 @@ public class LoginGUI {
         mainFrame.add(headerLabel);
         mainFrame.add(controlPanel);
         mainFrame.add(statusLabel);
-        mainFrame.setVisible(true);
+        
     }
 
-    public void showTextFieldDemo() {
+    public void showLogin() {
         headerLabel.setText("Inicio de sesión - Sistema de Inventario");
 
         userLabel = new JLabel("Usuario: ", JLabel.RIGHT);
@@ -158,7 +151,7 @@ public class LoginGUI {
 
 //Creacion y despliegue del panel de control principal del lado del cliente
                 mainFrame.dispose();
-                InventoryManagementSystem control_window = new InventoryManagementSystem();
+                ControlDeInventario control_window = new ControlDeInventario();
                 control_window.setLocationRelativeTo(null);
                 control_window.setVisible(true);
 
